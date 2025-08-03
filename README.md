@@ -16,10 +16,15 @@ This project is a city bike station planner web app. It calculates the shortest 
 FILES TO SUBMIT (INCLUDED IN ZIP)
 
 CityBikePlanner/
+
 ├── index.html         <-- Web interface and layout
+
 ├── style.css          <-- Styling, animations, layout
+
 ├── script.js          <-- Graph logic, routing, weather API
+
 ├── report.pdf         <-- Final design + algorithm analysis report
+
 ├── README.txt         <-- This file with full instructions
 
 Compress this folder into:
