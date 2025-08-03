@@ -1,0 +1,97 @@
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>City Bike Planner - Group 7</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://unpkg.com/leaflet@1.7.1/dist/leaflet.css" />
+    <script src="https://unpkg.com/leaflet@1.7.1/dist/leaflet.js"></script>
+    <script defer src="script.js"></script>
+</head>
+
+<div id="bikeRide" style="display:none;" class="bike-ride">🚴‍♂️</div>
+
+<body>
+    <header>
+        <h1>🚲 City Bike Planner</h1>
+        <p>Enhance NYC commuting with smart bike station planning</p>
+    </header>
+
+    <main>
+        <section class="goals">
+            <h2>Project Goals</h2>
+            <ul>
+                <li>🚴 Enhance NYC commuting via efficient routing</li>
+                <li>📍 Provide fast, real-time route suggestions</li>
+                <li>📊 Use data to optimize station placement</li>
+            </ul>
+        </section>
+
+        <div class="flex">
+            <section class="user-input">
+                <label for="start">Start Location:</label>
+                <select id="start">
+                    <option value="Central Park">Central Park</option>
+                    <option value="Times Square">Times Square</option>
+                    <option value="Brooklyn Bridge">Brooklyn Bridge</option>
+                    <option value="Wall Street">Wall Street</option>
+                    <option value="Harlem">Harlem</option>
+                </select>
+
+                <label for="end">End Location:</label>
+                <select id="end">
+                    <option value="Central Park">Central Park</option>
+                    <option value="Times Square">Times Square</option>
+                    <option value="Brooklyn Bridge">Brooklyn Bridge</option>
+                    <option value="Wall Street">Wall Street</option>
+                    <option value="Harlem">Harlem</option>
+                </select>
+
+                <button onclick="calculateRoute()">GET DISTANCE</button>
+                <div id="route-summary"></div>
+            </section>
+        </div>
+
+        <div id="map" style="height: 400px; width: 100%; margin-top: 20px;"></div>
+
+        <section class="user-input">
+            <h2>Rent a Bike</h2>
+        
+            <label for="rent-city">City:</label>
+            <select id="rent-city" onchange="populateStationDropdown()">
+                <option value="">Select City</option>
+                <option value="New York">New York</option>
+                <option value="San Francisco">San Francisco</option>
+                <option value="Chicago">Chicago</option>
+            </select>
+        
+            <label for="rent-station">Station:</label>
+            <select id="rent-station">
+                <option value="">Select Station</option>
+            </select>
+        
+            <button onclick="rentBike()">🚴 Rent Bike</button>
+            <div id="rent-output"></div>
+        </section>
+        
+        <section class="info">
+            <h2>How It Works</h2>
+            <ul>
+                <li><strong>Dijkstra’s Algorithm</strong> for shortest, fastest routes</li>
+                <li><strong>Breadth-First Search (BFS)</strong> for exploring alternate paths</li>
+            </ul>
+            <div class="bike-icon">🚴</div>
+        </section>
+
+        
+        <section id="weather" class="weather-widget">
+            <h2>Current Weather</h2>
+            <p id="weather-city">📍 City</p>
+            <p id="weather-temp">🌡️ Temp</p>
+            <p id="weather-desc">☁️ Condition</p>
+        </section>
+    </main>
+</body>
+</html>

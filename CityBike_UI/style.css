@@ -1,0 +1,111 @@
+
+body {
+    font-family: 'Segoe UI', sans-serif;
+    margin: 0;
+    padding: 0;
+    background: #f4f6f9;
+    color: #333;
+}
+
+header {
+    background: #007BFF;
+    color: white;
+    text-align: center;
+    padding: 20px;
+}
+
+main {
+    padding: 20px;
+}
+
+.goals ul {
+    list-style-type: none;
+    padding: 0;
+}
+
+.goals li {
+    padding: 5px 0;
+    font-size: 16px;
+}
+
+.user-input {
+    background: white;
+    padding: 20px;
+    border-radius: 8px;
+    max-width: 500px;
+    margin: 20px auto;
+    box-shadow: 0 0 10px rgba(0,0,0,0.1);
+}
+
+select, button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+button {
+    background: #28A745;
+    color: white;
+    border: none;
+    border-radius: 4px;
+    cursor: pointer;
+}
+
+button:hover {
+    background: #218838;
+}
+
+#route-summary {
+    margin-top: 10px;
+    font-weight: bold;
+}
+
+.info {
+    text-align: center;
+    margin-top: 30px;
+}
+
+.bike-icon {
+    font-size: 40px;
+    animation: bounce 1s infinite ease-in-out;
+    display: inline-block;
+    margin-top: 10px;
+}
+
+.bike-ride {
+    position: fixed;
+    bottom: 60px;
+    left: 100vw;             /* Start from far right */
+    font-size: 60px;
+    z-index: 9999;
+    animation: rideLeft 4s linear forwards;
+    pointer-events: none;
+}
+
+@keyframes rideLeft {
+    0%   { left: 100vw; transform: translateY(0); }
+    50%  { transform: translateY(-10px); }
+    100% { left: -80px; transform: translateY(0); }
+}
+
+.weather-widget {
+    background: #fff;
+    border-radius: 10px;
+    padding: 15px;
+    margin: 40px auto;
+    max-width: 320px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.1);
+    text-align: center;
+    font-family: sans-serif;
+  }
+  .weather-widget h2 {
+    margin-top: 0;
+    font-size: 1.3rem;
+    color: #007BFF;
+  }
+  .weather-widget p {
+    margin: 6px 0;
+    font-size: 1rem;
+  }
