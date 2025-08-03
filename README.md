@@ -1,6 +1,4 @@
-City Bike Planner – CSCI 377 Final Project Submission
-
-Group Members: Andrew Skoblov, Hanita Darfour, Freire Jonathan
+City Bike Planner 
 
 ---
 
